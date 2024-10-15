@@ -8,9 +8,7 @@ const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
-
-// Use '/posts' as the base path for all routes in postRoutes.js
-app.use('/posts', posts);
+app.use('/posts', posts);  // Correctly set the base path for routes
 
 app.listen(PORT, () => {
     connect.connectToServer();
